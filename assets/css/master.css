@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  margin: 0 auto;
+  width: 85%;
+}
+
+/* header */
+
+.container-head{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  background-color: #141414;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+}
+
+.logo-title > h1{
+  color: #E50914;
+}

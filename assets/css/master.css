@@ -9,6 +9,10 @@
   width: 85%;
 }
 
+.activeFilm{
+  display: none;
+}
+
 /* header */
 .container-head{
   display: flex;
@@ -43,6 +47,9 @@ main{
   margin: 10px;
   align-items: center;
   padding-left: 10px;
+}
 
+.list-movies > *{
+  margin-left: 10px;
 }
 /* main */

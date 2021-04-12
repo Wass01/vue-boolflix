@@ -32,10 +32,10 @@
     <main>
       <div class="container">
         <div class="list-movies" v-for="movie in movies">
-          <h3 v-if="movie.title == movie.original_title">
-            {{ movie.title }}
-          </h3>
-          <h4>{{ movie.original_title }}</h4>
+          <h3>{{ movie.title }}</h3>
+          <h4 :class="(movie.title == movie.original_title) ? 'activeFilm' : ''">
+            {{ movie.original_title }}
+          </h4>
           <p>{{ movie.original_language }}</p>
           <p>{{ movie.vote_average }}</p>
         </div>

@@ -17,13 +17,30 @@
           <h1>Boolflix</h1>
         </div>
         <div class="search">
-          <input type="text">
-          <button type="button" name="button">
+          <input type="text"
+          placeholder="cerca un film"
+          @keyup="search()"
+          v-model="searchMovie"
+          >
+          <button type="button" name="button" @click="search()">
             <i class="fas fa-search"></i>Cerca
           </button>
         </div>
       </div>
     </header>
+
+    <main>
+      <div class="container">
+        <div class="list-movies" v-for="movie in movies">
+          <h3 v-if="movie.title == movie.original_title">
+            {{ movie.title }}
+          </h3>
+          <h4>{{ movie.original_title }}</h4>
+          <p>{{ movie.original_language }}</p>
+          <p>{{ movie.vote_average }}</p>
+        </div>
+      </div>
+    </main>
 
 
   </div>

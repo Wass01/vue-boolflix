@@ -10,7 +10,6 @@
 }
 
 /* header */
-
 .container-head{
   display: flex;
   align-items: center;
@@ -32,3 +31,18 @@ header{
 .logo-title > h1{
   color: #E50914;
 }
+/* header */
+
+/* main */
+main{
+  margin-top: 80px;
+}
+
+.list-movies{
+  display: flex;
+  margin: 10px;
+  align-items: center;
+  padding-left: 10px;
+
+}
+/* main */

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: #00fffa;
+}
+
 .container{
   margin: 0 auto;
   width: 85%;
@@ -27,7 +31,7 @@ header{
   align-items: center;
   height: 80px;
   width: 100%;
-  background-color: #141414;
+  background-color: #0007e0;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -35,7 +39,8 @@ header{
 }
 
 .logo-title > h1{
-  color: #E50914;
+  color: #e5f0ff;
+  font-family: 'Yusei Magic';
 }
 /* header */
 
@@ -45,11 +50,22 @@ main{
 }
 
 .search input{
-  padding: 5px;
+  padding: 10px;
   text-align: center;
   margin-right: 10px;
   border-radius: 5px;
+  font-size: 15px;
   border: none;
+  width: 220px;
+}
+
+.search i{
+  position: relative;
+  left: 35px;
+}
+
+input:focus{
+  outline: none;
 }
 
 .search button{
@@ -66,12 +82,13 @@ main{
 }
 
 img.poster{
-  height: 400px;
+  height: 450px;
   width: 300px;
   opacity: 1;
   display: block;
   transition: .5s ease;
   backface-visibility: hidden;
+  border-radius: 8px;
 }
 
 img.poster:hover{
@@ -91,13 +108,19 @@ img.poster:hover{
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: #E50914;
-  height: 400px;
+  background-color: #16ff22;
+  height: 450px;
   width: 300px;
+  border-radius: 8px;
 }
 
 .info-movie p{
   color: #ffffff;
+  margin-top: 10px;
+  margin-left: 10px;
+}
+
+.info-movie h2{
   margin-top: 10px;
   margin-left: 10px;
 }

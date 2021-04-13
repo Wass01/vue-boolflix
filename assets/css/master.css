@@ -5,7 +5,7 @@
 }
 
 body{
-  background-color: #00fffa;
+  background-color: #141414;
 }
 
 .container{
@@ -31,7 +31,8 @@ header{
   align-items: center;
   height: 80px;
   width: 100%;
-  background-color: #0007e0;
+  background-color: #141414;
+  border-bottom: 1px solid #ffffff;
   position: fixed;
   z-index: 1;
   top: 0;
@@ -39,7 +40,7 @@ header{
 }
 
 .logo-title > h1{
-  color: #e5f0ff;
+  color: #E50914;
   font-family: 'Yusei Magic';
 }
 /* header */
@@ -82,7 +83,7 @@ input:focus{
 }
 
 img.poster{
-  height: 450px;
+  height: 480px;
   width: 300px;
   opacity: 1;
   display: block;
@@ -108,10 +109,11 @@ img.poster:hover{
   position: absolute;
   top: 0px;
   left: 0px;
-  background-color: #16ff22;
-  height: 450px;
+  background-color: #141414;
+  height: 480px;
   width: 300px;
   border-radius: 8px;
+  border: 2px solid #ffffff;
 }
 
 .info-movie p{
@@ -121,6 +123,7 @@ img.poster:hover{
 }
 
 .info-movie h2{
+  color: #E50914;
   margin-top: 10px;
   margin-left: 10px;
 }
@@ -137,7 +140,7 @@ img.flag{
 .info-movie span{
   font-weight: bold;
   font-size: 18px;
-  color: #000000;
+  color: #E50914;
 }
 
 /* valutazione */

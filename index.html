@@ -19,12 +19,9 @@
         <div class="search">
           <input type="text"
           placeholder="cerca un film"
-          @keyup="search()"
+          @keyup="search"
           v-model="searchMovie"
           >
-          <button type="button" name="button" @click="search()">
-            <i class="fas fa-search"></i>Cerca
-          </button>
         </div>
       </div>
     </header>
@@ -37,14 +34,18 @@
         >
           <img class="poster" :src="`http://image.tmdb.org/t/p/w200/${movie.poster_path}`" alt="">
           <div class="info-movie">
-            <h3>{{ movie.title }}</h3>
-            <h4 :class="(movie.title == movie.original_title) ? 'active' : ''">
+            <p><span>Titolo: </span>{{ movie.title }}</p>
+            <p :class="(movie.title == movie.original_title) ? 'active' : ''">
               {{ movie.original_title }}
-            </h4>
-            <img class="flag" v-if="movie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
-            <img class="flag" v-else-if="movie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
-            <img class="flag" v-else :src="`https://www.countryflags.io/${movie.original_language}/shiny/64.png`">
-            <!-- <p>{{ movie.vote_average }}</p> -->
+            </p>
+            <p><span>Descrizione: </span>{{ movie.overview }}</p>
+            <p>
+              <span>Lingua originale: </span>
+              <img class="flag" v-if="movie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
+              <img class="flag" v-else-if="movie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
+              <img class="flag" v-else-if :src="`https://www.countryflags.io/${movie.original_language}/shiny/64.png`">
+              <p v-else>{{ movie.original_language }}</p>
+            </p>
             <div class="star">
               <i v-for="(star, i) in 5" :class="ratingStar(movie, i)"></i>
             </div>
@@ -57,14 +58,18 @@
         >
           <img class="poster" :src="`http://image.tmdb.org/t/p/w200/${serie.poster_path}`" alt="">
           <div class="info-movie">
-            <h3>{{ serie.name }}</h3>
-            <h4 :class="(serie.name == serie.original_name) ? 'active' : ''">
-              {{ serie.original_name }}
-            </h4>
-            <img class="flag" v-if="serie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
-            <img class="flag" v-else-if="serie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
-            <img class="flag" v-else :src="`https://www.countryflags.io/${serie.original_language}/shiny/64.png`">
-            <!-- <p>{{ serie.vote_average }}</p> -->
+            <p><span>Titolo: </span>{{ serie.name }}</p>
+            <p :class="(serie.name == serie.original_name) ? 'active' : ''">
+              <span>Titolo originale: </span>{{ serie.original_name }}
+            </p>
+            <p><span>Descrizione: </span>{{ serie.overview }}</p>
+            <p>
+              <span>Lingua originale: </span>
+              <img class="flag" v-if="serie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
+              <img class="flag" v-else-if="serie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
+              <img class="flag" v-else-if :src="`https://www.countryflags.io/${serie.original_language}/shiny/64.png`">
+              <p v-else>{{ serie.original_language }}</p>
+            </p>
             <div class="star">
               <i v-for="(star, i) in 5" :class="ratingStar(serie, i)"></i>
             </div>

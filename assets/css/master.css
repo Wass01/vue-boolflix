@@ -60,16 +60,14 @@ main{
 }
 
 .list-movies{
-  width: 200px;
-  height: 350px;
   margin-top: 10px;
   margin-left: 10px;
   position: relative;
 }
 
 img.poster{
-  height: 350px;
-  width: 200px;
+  height: 400px;
+  width: 300px;
   opacity: 1;
   display: block;
   transition: .5s ease;
@@ -78,7 +76,7 @@ img.poster{
 
 img.poster:hover{
   cursor: pointer;
-  opacity: 0.1;
+  opacity: 0;
 }
 
 .list-movies:hover .info-movie {
@@ -91,12 +89,17 @@ img.poster:hover{
   align-items: flex-start;
   opacity: 0;
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 0px;
+  left: 0px;
+  background-color: #E50914;
+  height: 400px;
+  width: 300px;
 }
 
 .info-movie p{
   color: #ffffff;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .container-movSeries{

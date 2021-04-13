@@ -18,6 +18,8 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  width: 95%;
+  margin: 0 auto;
 }
 
 header{
@@ -42,15 +44,44 @@ main{
   margin-top: 80px;
 }
 
-.list-movies{
-  display: flex;
-  margin: 10px;
-  align-items: center;
-  padding-left: 10px;
+.search input{
+  padding: 5px;
+  text-align: center;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
 }
 
-.list-movies > *{
+.search button{
+  padding: 5px 15px;
+  text-align: center;
+  border-radius: 5px;
+  border: none;
+}
+
+.list-movies{
+  width: 200px;
+  height: 300px;
+  margin-top: 10px;
   margin-left: 10px;
+}
+
+img.poster{
+  height: 300px;
+  width: 200px;
+
+}
+
+.list-movies > div > *{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-movSeries{
+  display: flex;
+  flex-wrap: wrap;
+
 }
 
 img.flag{

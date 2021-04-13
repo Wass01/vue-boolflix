@@ -30,13 +30,13 @@
     </header>
 
     <main>
-      <!-- film -->
       <div class="container container-movSeries">
+        <!-- film -->
         <div class="list-movies"
         v-for="(movie, i) in movies"
         >
           <img class="poster" :src="`http://image.tmdb.org/t/p/w200/${movie.poster_path}`" alt="">
-          <!-- <div>
+          <div class="info-movie">
             <h3>{{ movie.title }}</h3>
             <h4 :class="(movie.title == movie.original_title) ? 'active' : ''">
               {{ movie.original_title }}
@@ -44,8 +44,11 @@
             <img class="flag" v-if="movie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
             <img class="flag" v-else-if="movie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
             <img class="flag" v-else :src="`https://www.countryflags.io/${movie.original_language}/shiny/64.png`">
-            <p>{{ movie.vote_average }}</p>
-          </div> -->
+            <!-- <p>{{ movie.vote_average }}</p> -->
+            <div class="star">
+              <i v-for="(star, i) in 5" :class="ratingStar(movie, i)"></i>
+            </div>
+          </div>
         </div>
 
         <!-- serie tv -->
@@ -53,8 +56,7 @@
         v-for="(serie, i) in series"
         >
           <img class="poster" :src="`http://image.tmdb.org/t/p/w200/${serie.poster_path}`" alt="">
-
-          <!-- <div>
+          <div class="info-movie">
             <h3>{{ serie.name }}</h3>
             <h4 :class="(serie.name == serie.original_name) ? 'active' : ''">
               {{ serie.original_name }}
@@ -62,10 +64,13 @@
             <img class="flag" v-if="serie.original_language == 'en'" :src="`https://www.countryflags.io/us/shiny/64.png`" alt="">
             <img class="flag" v-else-if="serie.original_language == 'ja'" :src="`https://www.countryflags.io/jp/shiny/64.png`" alt="">
             <img class="flag" v-else :src="`https://www.countryflags.io/${serie.original_language}/shiny/64.png`">
-            <p>{{ serie.vote_average }}</p>
-          </div> -->
-
+            <!-- <p>{{ serie.vote_average }}</p> -->
+            <div class="star">
+              <i v-for="(star, i) in 5" :class="ratingStar(serie, i)"></i>
+            </div>
+          </div>
         </div>
+
       </div>
     </main>
 

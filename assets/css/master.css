@@ -69,10 +69,9 @@ main{
 img.poster{
   height: 300px;
   width: 200px;
-
 }
 
-.list-movies > div > *{
+.list-movies .info-movie{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -81,10 +80,21 @@ img.poster{
 .container-movSeries{
   display: flex;
   flex-wrap: wrap;
-
 }
 
 img.flag{
   height: 20px;
 }
+
+/* valutazione */
+.star{
+  display: flex;
+  padding-left: 5px;
+}
+
+.gold{
+  color: #faff00;
+}
+/* valutazione */
+
 /* main */

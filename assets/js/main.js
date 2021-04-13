@@ -21,6 +21,16 @@ let app = new Vue({
       .then((serie) => {
         this.series = serie.data.results;
       });
+    },
+
+    // cambio valutazione da 1-10 a 1-5
+    ratingStar: function(item, index){
+      const voteChange = Math.ceil(item.vote_average/2);
+      if (index <= voteChange){
+        return 'fas fa-star gold';
+      } else {
+        return 'far fa-star';
+      }
     }
   },
 });

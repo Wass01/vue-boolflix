@@ -3,24 +3,31 @@ Vue.config.devtools = true;
 let app = new Vue({
   el: "#root",
   data: {
-    searchMovie: '',
+    searchTitle: '',
     movies: [],
     series: [],
+    actors: [],
   },
 
   methods: {
     search: function() {
       // chiamata film
-      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=390be9a6b25f187e23b42fdb13f8ed80&query=${this.searchMovie}&language=it`)
+      axios.get(`https://api.themoviedb.org/3/search/movie?api_key=390be9a6b25f187e23b42fdb13f8ed80&query=${this.searchTitle}&language=it`)
       .then((movie) => {
         this.movies = movie.data.results;
       });
 
       // chiamata serie tv
-      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=390be9a6b25f187e23b42fdb13f8ed80&query=${this.searchMovie}&language=it`)
+      axios.get(`https://api.themoviedb.org/3/search/tv?api_key=390be9a6b25f187e23b42fdb13f8ed80&query=${this.searchTitle}&language=it`)
       .then((serie) => {
         this.series = serie.data.results;
       });
+
+      // chiamata attori
+      // axios.get(`https://api.themoviedb.org/3/search/person?api_key=390be9a6b25f187e23b42fdb13f8ed80&query=${this.searchTitle}&language=it`)
+      // .then((actor) => {
+      //   this.actors = actor.data.results;
+      // });
     },
 
     // cambio valutazione da 1-10 a 1-5

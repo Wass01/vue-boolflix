@@ -4,10 +4,8 @@ let app = new Vue({
   el: "#root",
   data: {
     searchTitle: '',
-    selectGenre: '',
     movies: [],
     series: [],
-    listGenre: [],
   },
 
   methods: {

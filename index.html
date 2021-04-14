@@ -24,6 +24,10 @@
           @keyup="search()"
           v-model="searchTitle"
           >
+          <select class="selectGen" v-model="selectGenre">
+            <option value="">Tutti i generi</option>
+            <option v-for="genre in listGenre">{{  }}</option>
+          </select>
         </div>
       </div>
     </header>
@@ -33,6 +37,7 @@
         <!-- film -->
         <div class="list-movies"
         v-for="(movie, i) in movies"
+        v-if="(movie.genre_ids == selectGenre || selectGenre == '')"
         >
           <img class="poster" :src="`http://image.tmdb.org/t/p/w300/${movie.poster_path}`" alt="">
           <div class="info-movie">

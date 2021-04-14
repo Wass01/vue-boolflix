@@ -34,7 +34,7 @@ header{
   background-color: #141414;
   border-bottom: 1px solid #ffffff;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
 }
@@ -83,7 +83,7 @@ input:focus{
 }
 
 img.poster{
-  height: 480px;
+  height: 460px;
   width: 300px;
   opacity: 1;
   display: block;
@@ -99,6 +99,10 @@ img.poster:hover{
 
 .list-movies:hover .info-movie {
   opacity: 1;
+  height: 510px;
+  width: 380px;
+  position: absolute;
+  z-index: 1;
 }
 
 .info-movie{
@@ -110,7 +114,7 @@ img.poster:hover{
   top: 0px;
   left: 0px;
   background-color: #141414;
-  height: 480px;
+  height: 460px;
   width: 300px;
   border-radius: 8px;
   border: 2px solid #ffffff;
